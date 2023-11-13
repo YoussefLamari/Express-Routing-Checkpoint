@@ -8,7 +8,7 @@ app.use((req, res, next) => {
   const dayOfWeek = date.getDay();
   const hours = date.getHours();
 
-  if (dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 0 && hours < 24) {
+  if (dayOfWeek >= 1 && dayOfWeek <= 5 && hours >= 9 && hours < 17) {
     next(); // Proceed to the next middleware or route handler
   } else {
     res.send('The web application is only available during working hours (Monday to Friday, from 9 to 17).');
